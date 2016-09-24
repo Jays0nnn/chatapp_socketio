@@ -1,0 +1,67 @@
+<html>
+<head>
+
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <h1> Real Time Chat Application! </h1>
+        <br />
+        <div id="userFormArea" class="row">
+            <div class="col-md-12">
+                <form id="userForm">
+                    <div class="form-group">
+                        <label>Enter Username</label>
+                        <input class="form-control" id="username"></input>
+                        <br />
+                        <input type="submit" class="btn btn-primary" value="Login" />
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="messageArea" class="row">
+            <div class="col-md-4">
+                <div class="well">
+                    <h3>Online Users</h3>
+                    <ul class="list-group" id="users"></ul>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="chat" id="chat">
+                </div>
+                <form id="messageForm">
+                    <div class="form-group">
+                        <label>Enter Message</label>
+                        <textarea class="form-control" id="message"></textarea>
+                        <br />
+                        <input type="submit" class="btn btn-primary" value="Send Message" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+  
+    <script src="http://localhost:8000/socket.io/socket.io.js"></script>
+    
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="app.js"></script>
+
+<!-- 
+    //Once page loads, http.get will grab any saved data from the cms & print it on the ticker,
+    //Once that is done, Socket.io will then check for any new data thats being pushed within the CMS
+    //Find a way to automatically press the search button from the cms, grab that result, then return it to the view. -->
+
+
+
+</body>
+
+
+</html>
+
+
+
